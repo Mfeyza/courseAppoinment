@@ -7,12 +7,12 @@ const AppoinmentList = ({ appoinment, setAppoinment }) => {
 const [show,setShow]=useState(false)
 
   const handleDelete=(id)=>{
-    setAppoinment(appoinment.filter(item=>item.id != id))
+    setAppoinment(appoinment.filter(item=>item.id != id)) //iterasyonla id ye göre filtrele ve sil , kalanı koru
   }
 
  
   const handleConsulted = (id) => {
-    setAppoinment(appoinment.map(item => (item.id === id ? { ...item, consulted: true } : item)));
+    setAppoinment(appoinment.map(item => (item.id === id ? { ...item, consulted: true } : item))); //id ye göre consulted yap itere et.
     
   };
 

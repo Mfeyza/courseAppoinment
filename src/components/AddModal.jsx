@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 
 
-const AddModal = ({seciliTeacher,appoinment,setAppoinment}) => {
+const AddModal = ({selectedTeacher,appoinment,setAppoinment}) => {
  
 
     const [modalData, setModalData]= useState({
@@ -28,7 +28,7 @@ const AddModal = ({seciliTeacher,appoinment,setAppoinment}) => {
 
 
 const handleSave=()=>{
-  setAppoinment([...appoinment,{...modalData,...seciliTeacher,id:new Date().getTime(),consulted:false}])
+  setAppoinment([...appoinment,{...modalData,...selectedTeacher,id:new Date().getTime(),consulted:false}])
     setModalData({
         date:"",
         sname:"",
@@ -47,7 +47,7 @@ const handleSave=()=>{
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
-        <h1 className="modal-title fs-5" id="exampleModalLabel">{seciliTeacher?.tname}</h1>
+        <h1 className="modal-title fs-5" id="exampleModalLabel">{selectedTeacher?.tname}</h1>
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
      
