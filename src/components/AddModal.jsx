@@ -28,12 +28,13 @@ const AddModal = ({seciliTeacher,appoinment,setAppoinment}) => {
 
 
 const handleSave=()=>{
-  setAppoinment([...appoinment,{...modalData,...seciliTeacher,id:new Date().getTime()}])
+  setAppoinment([...appoinment,{...modalData,...seciliTeacher,id:new Date().getTime(),consulted:false}])
     setModalData({
         date:"",
         sname:"",
         time:"",
         tname:"",
+        consulted: false,
     })
 }
 

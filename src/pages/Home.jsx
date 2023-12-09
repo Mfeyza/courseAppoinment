@@ -6,8 +6,8 @@ import { useState } from 'react'
 import AddModal from '../components/AddModal'
 
 const Home = () => {
-  const [appoinment,setAppoinment]=useState(appointmentData)
-  const [seciliTeacher,setSeciliTeacher]=useState([])
+  const [appoinment,setAppoinment]=useState(appointmentData) //randevu seçenleri eklicez başlangıç değeri appoinmentdata array i onun yanına eklenecek
+  const [seciliTeacher,setSeciliTeacher]=useState([]) //bu state doctors dan hangi öğretmeni seçtiğimi yakalıyor!! 
   return (
     <div>
       <div  className='d-flex justfy-contenr-center align-items-center flex-column'>
@@ -18,7 +18,7 @@ const Home = () => {
         </div>
         <div className='d-flex flex-wrap container-fluid justify-content-center align-items-center gap-5 p-5 '> 
         {teacherData.map((teacherData)=>(
-            <Doctors teacher={teacherData} setSeciliTeacher={setSeciliTeacher}/>
+            <Doctors key={teacherData.id} teacher={teacherData} setSeciliTeacher={setSeciliTeacher}/> 
         ))}
 
         </div>
