@@ -18,11 +18,11 @@ const Home = () => {
       <NavbarC/>
       <div  className='d-flex justfy-contenr-center align-items-center flex-column'>
         <div className='mt-5 d-flex text-center flex-column'>
-           
-            <p className='fw-bold'>Our Teachers</p>
-            <div className='gif'>  
-              <p>"Everything is static for React unless indicated otherwise"</p>
+        <div className='gif'>  
+              <p className="fw-bold fs-5">"Everything is static for React unless indicated otherwise"</p>
               </div>
+            <p className='fw-bold mt-5 fs-2 '>Our Teachers</p>
+            
          
            
 
