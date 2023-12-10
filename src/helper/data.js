@@ -1,7 +1,7 @@
 export const appointmentData = [
     {
       id: 1,
-      sname: "Feyza Y.",
+      sname: "Feyza Y. 🤘🏻",
       date: "20.12.2023",
       
       consulted: true,
@@ -10,7 +10,7 @@ export const appointmentData = [
     },
     {
       id: 2,
-      sname: "Bahar K.",
+      sname: "Bahar K. 🌼",
      
       date: "18.12.2023",
       consulted: false,
