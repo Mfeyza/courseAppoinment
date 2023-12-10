@@ -20,7 +20,10 @@ const Home = () => {
         <div className='mt-5 d-flex text-center flex-column'>
            
             <p className='fw-bold'>Our Teachers</p>
-            <p>"Everything is static for React unless indicated otherwise"</p>
+            <div className='gif'>  
+              <p>"Everything is static for React unless indicated otherwise"</p>
+              </div>
+         
            
 
         </div>

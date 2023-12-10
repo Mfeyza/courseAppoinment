@@ -53,3 +53,10 @@ body{
         transform: translateY(5px);
     }
 }
+
+.gif{
+    
+    background-image: url(./components/200w.gif);
+    color: aliceblue;
+    border-radius: 10px;
+}
