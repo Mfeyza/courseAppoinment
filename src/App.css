@@ -60,3 +60,8 @@ body{
     color: aliceblue;
     border-radius: 10px;
 }
+
+.offcanvas-body,.offcanvas-header{
+    background-color: #e9335a33;
+
+}

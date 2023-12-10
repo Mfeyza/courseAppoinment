@@ -35,19 +35,19 @@ const [consult, SetConsult]=useState(false)
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Appointments</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
-  <div className='d-flex flex-row' >
+  <div class="offcanvas-body flex-column">
+  <div className='d-flex flex-column fs-5' >
         {appointment.map(({ tname, sname, date, time, id, consulted,selectTime }) => (
           
-          <div className='flex-column' key={id} onDoubleClick={()=>{handleConsulted(id)}} style={{position:"relative"}}  >
-           <div  style={{ display: consulted ? "block" : "none", position: "absolute", top: "12px" }}>Consulted</div>
-            <h1>{sname}</h1>
-            <p>{tname}</p>
-            <p>{date} - {time}</p>
-            <p>{selectTime}</p>
+          <div className='flex-row' key={id} onDoubleClick={()=>{handleConsulted(id)}} style={{position:"relative"}}  >
+           <div className='flex-row' style={{ display: consulted ? "block" : "none", position: "absolute", top: "12px" }}>Consulted</div>
+            <p><strong>Student Name:</strong>{sname}</p>
+            <p><strong>Teacher Name:</strong>{tname}</p>
+            <p>Date: {date}</p>
+            <p>Time:{selectTime}</p>
 
             <div>
-            <FontAwesomeIcon className='btn' icon="rocket" style={{ fontSize: '2em', color: 'blue' }} onClick={(()=>handleDelete(id))}  />
+            <FontAwesomeIcon className='btn' icon="rocket" style={{ fontSize: '1.3em', color: 'blue' }} onClick={(()=>handleDelete(id))}  />
 
             
             </div>
