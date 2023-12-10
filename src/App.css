@@ -1,0 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&display=swap');
+
+body{
+    background-color: #ECEFF1 !important;
+    font-family: 'Playpen Sans', cursive !important;
+}
+
+.navbtn:hover{
+    background-color: #E9335A !important;
+
+
+}
+.line{
+    text-decoration-line: none;
+}
+
+.navbark{
+    background-color: #e9335a28 !important;
+}
+
+.footerK{
+    background-color: #e9335a33;
+}
+.cards,.card{
+    background-color: #ECEFF1 !important;
+}
+
+.card:hover{
+    transform: scale(1.2s) !important;
+    transition: 0.6 !important;
+}
+
+.btn-cnvs{
+    background-color: #d65a7565 !important;
+}
+
+
+.btn-cnvs:hover {
+    background-color: rgba(113, 190, 190, 0.48) !important;
+    transform: scale(1.1);
+    animation: shake 0.5s ease-in-out infinite;
+    transition: 0.6s ;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}

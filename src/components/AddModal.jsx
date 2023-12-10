@@ -2,88 +2,131 @@ import React from 'react'
 import { useState } from 'react';
 
 
-const AddModal = ({selectedTeacher,appoinment,setAppoinment}) => {
+const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
+  const [selected, setSelected] = useState("");
+  const [modalData, setModalData] = useState({
+    tname: "",
+    sname: "",
+    date: "",
+    selected: "",
+    id: "",
+    img: "",
+  });
  
 
-    const [modalData, setModalData]= useState({
-     tname:"", 
-    sname:"",
-    date:"",
-    time:"",
-    id:"",
-    img:"",
+  const { sname, date} = modalData;
 
+  const handleModalData = () => {
+    setModalData({ ...modalData, selectTime:selected });
+  };
+  console.log(modalData);
 
-    });
-
- 
-    const {sname,date,time}= modalData
-    
-    const handleModalData=(e)=>{
-    setModalData({...modalData, [e.target.name]: e.target.value})
-
-}
-
-
-
-
-const handleSave=()=>{
-  setAppoinment([...appoinment,{...modalData,...selectedTeacher,id:new Date().getTime(),consulted:false}])
-    setModalData({
-        date:"",
-        sname:"",
-        time:"",
-        tname:"",
+  const handleSave = () => {
+    if(modalData.sname===""|| modalData.date ===""){
+      alert("Tüm alanları doldurunuz")
+        setModalData({
+        date: "",
+        sname: "",
+        tname: "",
+        selected: "",
         consulted: false,
-    })
-}
+      });
+        
+      
+     
+    }else {
+      setAppointment([
+        ...appointment,
+        { ...modalData, ...selectedTeacher, id: new Date().getTime(), consulted: false, selected  },
+      ]);
+      setModalData({
+        date: "",
+        sname: "",
+        tname: "",
+        selected: "",
+        consulted: false,
+      });
+        
+    }
+   
+    
+  };
+  console.log(selected);
 
   return (
     <>
+      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="exampleModalLabel">{selectedTeacher?.tname}</h1>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
 
-
-
-<div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div className="modal-dialog">
-    <div className="modal-content">
-      <div className="modal-header">
-        <h1 className="modal-title fs-5" id="exampleModalLabel">{selectedTeacher?.tname}</h1>
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal-body">
+              <div className="input-group mb-3 d-flex jus">
+                <div>
+                  <span
+                    className="input-group-text"
+                    id="inputGroup-sizing-default"
+                    htmlFor="sname"
+                  >
+                    Student Name
+                  </span>
+                  <input
+                    type="text"
+                    className="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    id="sname"
+                    name="sname"
+                    value={sname || ""}
+                    onChange={(e) => setModalData({ ...modalData, [e.target.name]: e.target.value })}
+                  />
+                </div>
+                <div className='d-flex flex-column'>
+                  <span className="input-group-text" id="inputGroup-sizing-default">Day/Time</span>
+                  <input
+                    type="date"
+                    className="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    value={date || ""}
+                    id="date"
+                    onChange={(e) => setModalData({ ...modalData, [e.target.name]: e.target.value })}
+                    name="date"
+                  />
+               
+                </div>
+                <select
+                  onChange={(e) => { setSelected(e.target.value); }}
+                  className="form-select"
+                  aria-label="Default select example"
+                  name="selectTime"
+                  defaultValue=""
+                 
+                >
+                  <option   >Select the time</option>
+                  <option value="09-10">09-10</option>
+                  <option value="10-11">10-11</option>
+                  <option value="11-12">11-12</option>
+                  <option value="13-14">13-14</option>
+                  <option value="14-15">14-15</option>
+                  <option value="15-16">15-16</option>
+                  <option value="16-17">16-17</option>
+                  <option value="17-18">17-18</option>
+                </select>
+              </div>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={handleSave}>Save changes</button>
+            </div>
+          </div>
+        </div>
       </div>
-     
-      <div className="modal-body">
-       
-  <div className="input-group mb-3 d-flex jus">
-    <div>
-  <span className="input-group-text" id="inputGroup-sizing-default" name="name" placeholder='İsminizi Giriniz' aria-label='name' 
-  value={sname|| ""}
-  onChange={handleModalData}
-  >Student Name</span>
-  <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"/>
-  </div>
-  <div className='d-flex flex-column'>
-  <span className="input-group-text" id="inputGroup-sizing-default">Day/Time</span>
-  <input type="date" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-value={date || ""}
-    id="date"onChange={handleModalData}
-    name="date"/>
-  <input type="time" className='form-control' id='exampleTime' name='time' value={time} onChange={handleModalData}/>
-  </div>
-  
-  
-</div>
-      </div>
-      <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary" onClick={handleSave}>Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
     </>
-  )
-}
+  );
+};
 
-export default AddModal
+export default AddModal;

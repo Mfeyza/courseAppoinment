@@ -3,17 +3,19 @@ export const appointmentData = [
       id: 1,
       sname: "Feyza Y.",
       date: "20.12.2023",
-      time:"19:00",
+      
       consulted: true,
       tname: "Antony Harold",
+      selectTime:"19-20",
     },
     {
       id: 2,
       sname: "Bahar K.",
-      time:"15:00",
+     
       date: "18.12.2023",
       consulted: false,
       tname: "Noah Adams",
+      selectTime:"13-14",
     },
    
   ]

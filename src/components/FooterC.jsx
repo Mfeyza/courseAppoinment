@@ -4,7 +4,7 @@ const FooterC = () => {
   return (
     <>
    
-<div class="container-fluid mt-5">
+<div class="w-100 mt-5">
 
   <footer
           class="text-center text-lg-start text-dark"
@@ -12,8 +12,8 @@ const FooterC = () => {
           >
    
     <section
-             class="d-flex justify-content-between p-3 text-white"
-             style={{backgroundColor:"#21D192"}}
+             class="footerK d-flex justify-content-between p-3 text-white"
+            
              >
     
       <div class="me-5">
@@ -90,7 +90,7 @@ const FooterC = () => {
           </div>
          
 
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class=" col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
            
             <h6 class="text-uppercase fw-bold">Useful links</h6>
             <hr
@@ -137,9 +137,9 @@ const FooterC = () => {
          class="text-center p-3"
          style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}
          >
-      © 2020 Copyright:
+      © 2023 MFY Collection
       <a class="text-dark" href="https://mdbootstrap.com/"
-         >MDBootstrap.com</a
+         >https://clarusway.com/</a
         >
     </div>
   

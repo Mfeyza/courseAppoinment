@@ -8,9 +8,9 @@ const Teachers = ({teacher,setSelectedTeacher}) => { //burada teacher datasını
   return (
     <>
     
-        <div className='d-flex mt-5'key={teacher.id} >
+        <div className='cards d-flex mt-5'key={teacher.id} >
         <div className="card" style={{width: "18rem", border:"none"}}>
-  <img src={teacher.img} className="card-img-top btn" alt={teacher.img} 
+  <img src={teacher.img} className="card-img-top btn img-card" alt={teacher.img} 
   onClick={()=>setSelectedTeacher(teacher)}
   data-bs-toggle="modal" data-bs-target="#exampleModal"/>
   <div className="card-body ">
