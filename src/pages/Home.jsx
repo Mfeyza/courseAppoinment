@@ -10,6 +10,8 @@ import FooterC from '../components/FooterC'
 
 
 
+
+
 const Home = () => {
   const [appointment,setAppointment]=useState(appointmentData) //?randevu seçenleri eklicez başlangıç değeri appoinmentdata array i onun yanına eklenecek
   const [selectedTeacher,setSelectedTeacher]=useState([]) //?bu state teachers dan modal açılırken hangi öğretmeni seçtiğimi yakalıyor!! 

@@ -35,22 +35,36 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
       
      
     }else {
-      setAppointment([
-        ...appointment,
-        { ...modalData, ...selectedTeacher, id: new Date().getTime(), consulted: false, selected  },
-      ]);
-      setModalData({
-        date: "",
-        sname: "",
-        tname: "",
-        selected: "",
-        consulted: false,
-      });
-        
+     
+      const repeatAppointment = appointment.find(
+        (item) =>
+          item.sname === modalData.sname &&
+          item.date === modalData.date &&
+          item.selected === selected
+      );
+  
+      if (repeatAppointment) {
+        alert("Bu randevu zaten eklenmiş.");
+      } else {
+        setAppointment([
+          ...appointment,
+          { ...modalData, ...selectedTeacher, id: new Date().getTime(), consulted: false, selected },
+        ]);
+  
+        // Modal verilerini temizle
+        setModalData({
+          date: "",
+          sname: "",
+          tname: "",
+          selected: "",
+          consulted: false,
+        });
+      }
     }
+  };
    
     
-  };
+  ;
   console.log(selected);
 
   return (
