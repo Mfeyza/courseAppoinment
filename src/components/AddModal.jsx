@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 
 const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
-  const [selected, setSelected] = useState("");
+  
   const [modalData, setModalData] = useState({
     tname: "",
     sname: "",
@@ -14,13 +14,13 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
   });
  
 
-  const { sname, date} = modalData;
+  const { sname, date,selected} = modalData;
 
  
   console.log(modalData);
 
   const handleSave = () => {
-    if(modalData.sname===""|| modalData.date ===""){
+    if(modalData.sname===""|| modalData.date ===""|| modalData.selected===""){
       alert("Tüm alanları doldurunuz")
         setModalData({
         date: "",
@@ -112,7 +112,7 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
                
                 </div>
                 <select
-                  onChange={(e) => { setSelected(e.target.value); }}
+                  onChange={(e) => setModalData({ ...modalData, [e.target.name]: e.target.value })}
                   className="form-select"
                   aria-label="Default select example"
                   name="selected"
@@ -120,16 +120,11 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
                   
                   
                  
-                >
-                  <option  value="" disabled >Select the time</option>
-                  <option >09-10</option>
-                  <option >10-11</option>
-                  <option >11-12</option>
-                  <option >13-14</option>
-                  <option >14-15</option>
-                  <option >15-16</option>
-                  <option >16-17</option>
-                  <option >17-18</option>
+                ><option  value="" disabled >Select the time</option>
+                  {["09-10","10-11","11-12","13-14","14-15","15-16","16-17","17-18"].map(item=> <option value={item}>{item}</option>)}
+                  
+                 
+               
                 </select>
                 </div>
               </div>

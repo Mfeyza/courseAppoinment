@@ -57,8 +57,14 @@ body{
 .gif{
     
     background-image: url(./components/200w.gif);
-    color: aliceblue;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(8, 9, 9);
     border-radius: 10px;
+    
+   
+    
+    
 }
 
 .offcanvas-body,.offcanvas-header{
