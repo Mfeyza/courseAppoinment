@@ -39,7 +39,7 @@ const [consult, SetConsult]=useState(false)
   </div>
   <div class="offcanvas-body flex-column ">
   <div className='d-flex flex-column fs-5 ' >
-        {appointment.map(({ tname, sname, date, time, id, consulted,selectTime }) => (
+        {appointment.map(({ tname, sname, date, time, id, consulted,selected }) => (
           
           <div className='d-flex flex-column' key={id} onDoubleClick={()=>{handleConsulted(id)}} style={{position:"relative"}}  >
            <div className='flex-row consultedDiv-btn mt-5 p-2' style={{ display: consulted ? "block" : "none", position: "absolute", top: "12px" }}>Consulted✔️</div>
@@ -47,7 +47,7 @@ const [consult, SetConsult]=useState(false)
             <p><strong>Student Name:</strong>{sname}</p>
             <p><strong>Teacher Name:</strong>{tname}</p>
             <p><strong>Date:</strong> {date}</p>
-            <p><strong>Time:</strong>{selectTime} </p> 
+            <p><strong>Time:</strong>{selected} </p> 
 
            
             <div>

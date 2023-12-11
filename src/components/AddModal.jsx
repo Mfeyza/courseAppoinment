@@ -16,9 +16,7 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
 
   const { sname, date} = modalData;
 
-  const handleModalData = () => {
-    setModalData({ ...modalData, selectTime:selected });
-  };
+ 
   console.log(modalData);
 
   const handleSave = () => {
@@ -52,7 +50,7 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
         ]);
   
         // Modal verilerini temizle
-        setModalData({
+        setModalData({ 
           date: "",
           sname: "",
           tname: "",
@@ -117,19 +115,21 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
                   onChange={(e) => { setSelected(e.target.value); }}
                   className="form-select"
                   aria-label="Default select example"
-                  name="selectTime"
-                  defaultValue=""
+                  name="selected"
+                  value={selected}
+                  
+                  
                  
                 >
-                  <option   >Select the time</option>
-                  <option value="09-10">09-10</option>
-                  <option value="10-11">10-11</option>
-                  <option value="11-12">11-12</option>
-                  <option value="13-14">13-14</option>
-                  <option value="14-15">14-15</option>
-                  <option value="15-16">15-16</option>
-                  <option value="16-17">16-17</option>
-                  <option value="17-18">17-18</option>
+                  <option  value="" disabled >Select the time</option>
+                  <option >09-10</option>
+                  <option >10-11</option>
+                  <option >11-12</option>
+                  <option >13-14</option>
+                  <option >14-15</option>
+                  <option >15-16</option>
+                  <option >16-17</option>
+                  <option >17-18</option>
                 </select>
                 </div>
               </div>

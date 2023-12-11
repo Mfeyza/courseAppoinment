@@ -6,7 +6,7 @@ export const appointmentData = [
       
       consulted: false,
       tname: "Antony Harold",
-      selectTime:"19-20",
+      selected:"19-20",
     },
     {
       id: 2,
@@ -15,7 +15,7 @@ export const appointmentData = [
       date: "05.12.2023",
       consulted: true,
       tname: "Noah Adams",
-      selectTime:"13-14",
+      selected:"13-14",
     },
    
   ]

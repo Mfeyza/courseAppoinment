@@ -10,8 +10,8 @@ const Teachers = ({teacher,setSelectedTeacher,setTeacherd}) => { //burada teache
     <>
     
         <div className='cards d-flex mt-5'key={teacher.id} >
-        <div className="card" style={{width: "18rem", border:"none"}}>
-  <img src={teacher.img} className="card-img-top btn img-card" alt={teacher.img} 
+        <div className="card" id='card' style={{width: "18rem", border:"none"}}>
+  <img src={teacher.img} className="card-img-top btn "id='img-card' alt={teacher.img} 
   onClick={()=>setSelectedTeacher(teacher)}
   data-bs-toggle="modal" data-bs-target="#exampleModal"/>
   <div className="card-body ">

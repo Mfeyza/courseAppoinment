@@ -120,3 +120,12 @@ body{
   #date{
     background-color: #852136 !important;
   }
+  a{
+    text-decoration: none !important;
+  }
+
+  #card:hover{
+    transform: scale(1.1);
+    transition: 0.7s ease;
+
+  }
