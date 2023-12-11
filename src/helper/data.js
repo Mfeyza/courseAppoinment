@@ -5,7 +5,7 @@ export const appointmentData = [
       date: "20.12.2023",
       
       consulted: false,
-      tname: "Antony Harold",
+      tname: "Anthony Harold",
       selected:"19-20",
     },
     {
