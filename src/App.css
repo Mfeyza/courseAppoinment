@@ -62,6 +62,61 @@ body{
 }
 
 .offcanvas-body,.offcanvas-header{
-    background-color: #e9335a33;
+    background-color: #7671736b;
 
 }
+
+.offcanvas-body {
+    overflow: auto;
+  }
+  
+  .offcanvas-body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .btnTemizle{
+    background-color: rgba(96, 21, 21, 0.585)!important;
+    font-weight: 800 !important;
+  }
+
+  .consultedDiv-btn{
+    
+    background-color: rgba(95, 34, 34, 0.668) ;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+
+  }
+  .btn-modal2{
+    background-color: #d65a7584 !important;
+    border: none !important;
+
+    
+  }
+  .btn-modal2:hover{
+    transform: scale(1.1);
+    transition: 1s;
+  }
+
+  .btn-icon{
+    font-size: 25px !important;
+    color: #852136 !important;
+  }
+  .modal-content{
+    background-color: #794550d4 !important;
+
+  }
+  .d-flex.flex-row.g-5{
+    background-color: #eceff160;
+
+  }
+  .form-select,#inputGroup-sizing-default.input-group-text,#sname.form-control,#date.form-control{
+    background-color: #edebec78 !important;
+  }
+  option{
+    font-size: 15px !important;
+    background-color:#79455096  !important;
+  }
+
+  #date{
+    background-color: #852136 !important;
+  }

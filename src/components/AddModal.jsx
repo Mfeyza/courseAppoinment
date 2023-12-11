@@ -56,22 +56,22 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
   return (
     <>
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">{selectedTeacher?.tname}</h1>
+        <div className="modal-dialog ">
+          <div className="modal-content ">
+            <div className="modal-header ">
+              <h1 className="modal-title fs-5" id="exampleModalLabel"><strong>{selectedTeacher?.tname}💫</strong></h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <div className="modal-body">
-              <div className="input-group mb-3 d-flex jus">
-                <div>
+            <div className="modal-body  ">
+              <div className="input-group mb-3 d-flex flex-column g-5">
+                <div className='d-flex flex-row g-5'>
                   <span
                     className="input-group-text"
                     id="inputGroup-sizing-default"
                     htmlFor="sname"
                   >
-                    Student Name
+                   <strong>Student Name</strong> 
                   </span>
                   <input
                     type="text"
@@ -84,11 +84,12 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
                     onChange={(e) => setModalData({ ...modalData, [e.target.name]: e.target.value })}
                   />
                 </div>
-                <div className='d-flex flex-column'>
-                  <span className="input-group-text" id="inputGroup-sizing-default">Day/Time</span>
+                <div className='flex-row g-5'>
+                <div className='d-flex flex-row g-5'>
+                  <span className="input-group-text" id="inputGroup-sizing-default"><strong>Day/Time</strong></span>
                   <input
                     type="date"
-                    className="form-control"
+                    className="form-control "
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default"
                     value={date || ""}
@@ -116,11 +117,12 @@ const AddModal = ({ selectedTeacher, appointment, setAppointment }) => {
                   <option value="16-17">16-17</option>
                   <option value="17-18">17-18</option>
                 </select>
+                </div>
               </div>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={handleSave}>Save changes</button>
+              <button type="button" className="btn btn-modal2 btn-primary" data-bs-dismiss="modal" onClick={handleSave}>Save changes</button>
             </div>
           </div>
         </div>

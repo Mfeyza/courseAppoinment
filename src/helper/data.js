@@ -4,7 +4,7 @@ export const appointmentData = [
       sname: "Feyza Y. 🤘🏻",
       date: "20.12.2023",
       
-      consulted: true,
+      consulted: false,
       tname: "Antony Harold",
       selectTime:"19-20",
     },
@@ -12,8 +12,8 @@ export const appointmentData = [
       id: 2,
       sname: "Bahar K. 🌼",
      
-      date: "18.12.2023",
-      consulted: false,
+      date: "05.12.2023",
+      consulted: true,
       tname: "Noah Adams",
       selectTime:"13-14",
     },
@@ -29,16 +29,17 @@ export const appointmentData = [
     },
     {
       id: 2,
+      tname: "Anthony - Instructor 🕶️",
+      dep: "Clarusway || Full Stack TR || Instructor || Academic Coordinator	",
+      img: "https://ca.slack-edge.com/T05QKNCTHM4-U05QSC0S5C2-ee40c928bbc0-72",
+    },
+    {
+      id: 3,
       tname: "Harvey",
       dep: " Clarusway || Full Stack TR || Instructor",
       img: "https://ca.slack-edge.com/T05QKNCTHM4-U05SLS3GC4S-ee2565a13466-512",
     },
-    {
-      id: 3,
-      tname: "Anthony - Instructor",
-      dep: "Clarusway || Full Stack TR || Instructor || Academic Coordinator	",
-      img: "https://ca.slack-edge.com/T05QKNCTHM4-U05QSC0S5C2-ee40c928bbc0-72",
-    },
+    
     {
       id: 4,
       tname: "Felix Franko	",

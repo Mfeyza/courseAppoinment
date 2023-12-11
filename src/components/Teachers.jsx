@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 
 
 
-const Teachers = ({teacher,setSelectedTeacher}) => { //burada teacher datasını getirdim , click olduğunda öğretmen seçtim
+
+const Teachers = ({teacher,setSelectedTeacher,setTeacherd}) => { //burada teacher datasını getirdim , click olduğunda öğretmen seçtim
   // const [teacher,setTeacher]=useState("") 
   return (
     <>
@@ -14,7 +15,7 @@ const Teachers = ({teacher,setSelectedTeacher}) => { //burada teacher datasını
   onClick={()=>setSelectedTeacher(teacher)}
   data-bs-toggle="modal" data-bs-target="#exampleModal"/>
   <div className="card-body ">
-    <h5 className="card-title">{teacher.tname}</h5>
+    <h5 className="card-title"><strong>{teacher.tname}</strong></h5>
     <p className="card-text">{teacher.dep}</p>
     
   </div>
@@ -23,7 +24,7 @@ const Teachers = ({teacher,setSelectedTeacher}) => { //burada teacher datasını
         <div>
 
     </div>
-    
+  
     
     </>
   )

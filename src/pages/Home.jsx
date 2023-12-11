@@ -11,11 +11,21 @@ import FooterC from '../components/FooterC'
 
 
 const Home = () => {
-  const [appointment,setAppointment]=useState(appointmentData) //randevu seçenleri eklicez başlangıç değeri appoinmentdata array i onun yanına eklenecek
-  const [selectedTeacher,setSelectedTeacher]=useState([]) //bu state doctors dan hangi öğretmeni seçtiğimi yakalıyor!! 
+  const [appointment,setAppointment]=useState(appointmentData) //?randevu seçenleri eklicez başlangıç değeri appoinmentdata array i onun yanına eklenecek
+  const [selectedTeacher,setSelectedTeacher]=useState([]) //?bu state teachers dan modal açılırken hangi öğretmeni seçtiğimi yakalıyor!! 
+  const [teacher, setTeacher]=useState(teacherData) //? bu state teacherdan filtreleme yaptığımda setTeacher fonksionu ile state i günceller ve arama sonucuna göre filtrelenmiş öğretmen listesini oluşturur.
+  const handleSearch = (e) => {
+    let searchTeacher = e.target.value.toLowerCase();
+    let filtTeacher = teacherData.filter((teacher) => {
+      return teacher.tname.toLowerCase().includes(searchTeacher);
+    });
+    setTeacher(filtTeacher); //*burada filtrelenmiş öğretmenleri state in içine atıp dom a basıyorum.
+    console.log(filtTeacher);
+  };
+  
   return (
     <div>
-      <NavbarC/>
+     <NavbarC teacher={teacherData} handleSearch={handleSearch} setTeacherd={setTeacher} teacherd={teacher}/>
       <div  className='d-flex justfy-contenr-center align-items-center flex-column'>
         <div className='mt-5 d-flex text-center flex-column'>
         <div className='gif'>  
@@ -28,12 +38,13 @@ const Home = () => {
 
         </div>
         <div className='d-flex flex-wrap container-fluid justify-content-center align-items-center gap-5 p-5 '> 
-        {teacherData.map((teacherData)=>(
-            <Teachers key={teacherData.id} teacher={teacherData} setSelectedTeacher={setSelectedTeacher}/> 
+        {teacher.map((teacherData)=>(
+            <Teachers key={teacherData.id} teacher={teacherData} setSelectedTeacher={setSelectedTeacher} setTeacher={setTeacher} teacherd={teacher}/> 
         ))}
 
         </div>
         <AddModal appointment={appointment} setAppointment={setAppointment} selectedTeacher={selectedTeacher}/> 
+        
         <AppointmentList appointment={appointment} setAppointment={setAppointment}/>
         <FooterC />
 

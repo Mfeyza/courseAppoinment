@@ -1,7 +1,11 @@
 import React from 'react'
 import logo from "./logo.png"
 
-const NavbarC = () => {
+const NavbarC = ({teacher, handleSearch, setTeacher,teacherd}) => {
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+   
+  };
   return (
     <div>
       <nav class="navbar navbark navbar-expand-lg  d-flex">
@@ -22,7 +26,7 @@ const NavbarC = () => {
          
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2 w-100" type="search" placeholder="Search" aria-label="Search"/>
+          <input class="form-control me-2 w-100" type="search" placeholder="Search" aria-label="Search" onChange={handleSearch}/>
           <button class="btn navbtn me-5" type="submit">Search</button>
         </form>
       </div>
