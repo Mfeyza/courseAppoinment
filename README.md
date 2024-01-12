@@ -1,3 +1,9 @@
+
+<img src="./Animationcripto.gif"  width="90.5%" height="550" />
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
