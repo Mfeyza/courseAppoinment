@@ -1,4 +1,48 @@
+ Appointment Scheduler https://course-appoinment.vercel.app/
+ Appointment Scheduler is a web application designed for scheduling appointments with teachers. It allows students to view teacher profiles, select a teacher, and book appointments based on available dates and times.
 
+Features
+Display of teacher profiles with images and department information.
+Modal-based appointment scheduling system.
+Search functionality to filter and find specific teachers.
+A dynamic appointment list showing all scheduled appointments with options to delete or mark them as consulted.
+An alert system to welcome users and provide necessary information.
+Responsive design for an optimal experience on various devices and screen sizes.
+
+
+Installation
+To run this project on your local machine:
+
+Clone or download the repository to your computer.
+Open the project directory in your terminal.
+Install the necessary dependencies (if any) via npm install or yarn.
+Start the application by running npm start or yarn start.
+Open your web browser and navigate to localhost:3000 (or the port provided in your terminal).
+
+Usage
+Browse through the list of available teachers on the main page.
+Use the search bar to find teachers by name.
+Click on a teacher's image to open the appointment modal.
+Fill in the appointment details including student name, date, and time, and save the appointment.
+View all scheduled appointments and manage them through the appointment list.
+Click the 'Temizle' button to clear all appointments.
+
+
+----Technical Details
+The application is built using React.js.
+State management in React for handling user inputs and appointment data.
+Bootstrap is used for responsive design and UI components.
+SweetAlert2 for user alerts and confirmations.
+
+
+
+
+-----Dependencies-----
+React.js
+Bootstrap
+SweetAlert2
+Contributing
+Contributions to this project are welcome. Please ensure to follow the existing code structure and style guides when making contributions.
 <img src="./Animationcourse.gif"  width="30.5%" height="450" />
 
 
