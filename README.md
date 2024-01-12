@@ -1,5 +1,5 @@
 
-<img src="./Animationcripto.gif"  width="90.5%" height="550" />
+<img src="./Animationcourse.gif"  width="30.5%" height="450" />
 
 
 
