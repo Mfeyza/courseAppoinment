@@ -43,7 +43,24 @@ Bootstrap
 SweetAlert2
 Contributing
 Contributions to this project are welcome. Please ensure to follow the existing code structure and style guides when making contributions.
-<img src="./Animationcourse.gif"  width="30.5%" height="450" />
+  
+  
+  
+  
+  
+
+ 
+ 
+ 
+ 
+ 
+ <img src="./Animationcourse.gif"  width="30.5%" height="450" />
+
+
+
+
+
+
 
 
 
